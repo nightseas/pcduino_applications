@@ -28,11 +28,17 @@ You got three options to connect UNO with ADC module:
 
 Additional package(s) are needed before using libarduino for UNO:
 ```sh
-sudo apt-get install libi2c-dev i2c-tools
+sudo apt-get install libi2c-dev i2c-tools git
+```
+
+Fetch the Arduino lib for UNO:
+```sh
+git clone https://github.com/nightseas/libarduino_uno
 ```
 
 Clean and Compile the lib:
 ```sh
+cd libarduino_uno
 make clean
 make
 ```
@@ -68,5 +74,5 @@ OBJS += helloADC
 Compile and run:
 ```sh
 make
-sudo output/helloLibArduino
+sudo output/helloADC
 ```
